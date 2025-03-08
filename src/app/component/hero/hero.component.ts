@@ -27,7 +27,7 @@ export class HeroComponent {
       type: 'Webová stránka',
       description: 'Moderní stránky pro začínající Minecraft projekt s hráčskou integrací a funkčním vlastním obchodem.',
       image: 'https://i.imgur.com/uLccv2Z.png',
-      link: 'https://www.moonix.cz',
+      link: 'https://hisenshowcase.github.io/',
       tech: [
         '<i class="fa-brands fa-html5"></i>',
         '<i class="fa-brands fa-css3"></i>',
@@ -37,7 +37,7 @@ export class HeroComponent {
       status: 'Public',
       year: 2021,
       customLinkText: ' moonix.cz',  // Custom link text
-      actualLink: 'https://www.moonix.cz'  // The hidden actual link
+      actualLink: 'https://hisenshowcase.github.io/'  // The hidden actual link
     },
     {
       title: 'eSaveItem',
