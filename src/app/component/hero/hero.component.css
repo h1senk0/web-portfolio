@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 3.5rem; /* Larger font size for main title */
+  background: -webkit-linear-gradient(#ee5914, #ff1e00); /* Orange color */
+  margin-bottom: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 150px;
+  font-family: 'Jost', sans-serif; /* Example font */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  filter: drop-shadow(0px 0px 35px #e749007c);
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Sub Title */
+.sub-title {
+  font-size: 1.5rem; /* Smaller font size for subtitle */
+  color: #a3a6c5; /* Default text color */
+  font-family: 'Jost', sans-serif;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 20px;
+  padding: 0 350px; /* Add padding to the left and right to create space */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+/* Content Box */
+.content-box {
+  flex: 1;
+  margin-top: 25px;
+  max-width: 35%; /* Make the divs narrower */
+  text-align: left;
+}
+
+/* Section Title */
+.st {
+    font-size: 1.5rem;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#ee5914, #ff1e00); /* Orange color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 10px #e74800);
+    display: inline-block; /* Aligns this title inline */
+    margin-right: 10px; /* Adds a small gap between the two titles */
+  }
+  
+  .st2 {
+    background: white;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Jost', sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Aligns this title inline */
+  }
+
+/* Technologies List */
+.technologies-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.technologies-list li {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  align-items: center;
+  color: #a3a6c5;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ee4014;
+  filter: drop-shadow(0px 0px 10px #e7490098);
+  margin-right: 10px;
+}
+
+/* Description */
+.description {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem;
+  margin-top: 0px;
+  color: #a3a6c5;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.projects-section {
+    margin-top: 100px;
+    text-align: left;
+    padding: 0 350px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Aligns items properly */
+    align-items: flex-start;
+    max-width: 100%; /* Prevents full screen stretching */
+    justify-content: center; /* ✅ Centers items horizontally */
+    margin-bottom: 20px; /* ✅ Adds space below each section */
+
+
+  }
+  
+  .project-card {
+    width: 45%;
+    background-color: #0d0f16;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    font-family: 'Jost', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: none; /* Disable the animation */
+    max-width: 520px; /* Prevents full-width stretching */
+    cursor: pointer; /* Change cursor to hand */
+    transition: 0.5s filter;
+  }
+  
+  
+  /* Animation for new project cards */
+@keyframes fadeInSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* Starts slightly lower */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply animation when new projects appear */
+.project-card.new-card {
+  animation: fadeInSlideUp 0.5s ease-out;
+}
+  
+  .project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .project-type {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ee5914, #ff1e00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 15px;
+  }
+
+  .project-used {
+    color: white;
+  }
+  
+  .project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .project-tech {
+    font-size: 0.9rem;
+    color: #6c6f8c; /* Grayer text */
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+  }
+
+  .project-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .project-desc {
+    font-size: 1.1rem;
+    color: #a3a6c5;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .project-card:hover{
+    filter: brightness(1.1);
+  }
+  
+  .project-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ee5914;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #ff1e00;
+  }
+
+  .load-more-btn-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center;
+    width: 100%;
+    margin-top: 30px; /* Space above */
+    flex-direction: column;
+  }
+
+  .load-more-btn {
+    background: linear-gradient(90deg, #ee5914, #ff1e00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .load-more-btn:hover {
+    filter: brightness(1.2);
+  }
+  
+  .submit-btn {
+    background: linear-gradient(90deg, #ee5914, #ff1e00);
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    filter: brightness(1.2);
+  }
+
+  .contact-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .custom-link-text {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%; /* Ensures full width for proper alignment */
+    justify-content: space-between; /* Ensures the link stays on the left and tech icons go to the right */
+
+  }
+  
+  .linkcss{
+    background: -webkit-linear-gradient(#ee5914, #ff1e00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .project-tech-icon {
+    margin-left: auto; /* Pushes the pointer icon to the far right */
+  }
+
+  .custom-link-text i.fa-arrow-pointer {
+    color: #53545f !important; /* Forces the pointer icon to be gray */
+  }
+
+  .custom-link-text i.fa-up-right-from-square {
+    transition: transform 0.3s ease-in-out; /* Smooth transition when unhovered */
+  }
+
+  .custom-link-text:hover i.fa-up-right-from-square {
+    transform: rotate(20deg); /* Rotate the icon 45 degrees to the right */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the rotation */
+  }
+  
+  .custom-link-text a {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#ee5914, #ff1e00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-grow: 1; /* Makes the link take up all available space on the left */
+  }
+  .custom-link-text i {
+    margin-right: 8px; /* Adds gap between the link icon and the custom link text */
+  }
+  
+  .techs {
+    color: #53545f; /* Gray color for the tech icons */
+    display: flex; /* Align the tech icons in a row */
+    gap: 8px; /* 8px gap between each tech icon */
+    margin-left: auto; /* Pushes the tech icons to the far right */
+  }
+/* Additional styling to ensure tech icons stay aligned to the right */
+.custom-link-text .techs {
+  margin-left: auto; /* Pushes the tech icons to the far right */
+}
+
+  .custom-link-text i {
+    font-size: 1rem;
+  }
+  
+  
+  
+
+
+  
+  
+  

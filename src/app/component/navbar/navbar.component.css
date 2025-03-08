@@ -1,0 +1,132 @@
+/* Global font styles */
+body {
+    font-family: 'Jost', sans-serif; /* Default font */
+    color: #a3a6c5;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* General navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20%;
+    color: #a3a6c5;
+    font-weight: 700;
+    font-family: 'Inconsolata', monospace;
+    backdrop-filter: blur(10px);
+}
+
+/* Left Section */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo with glow effect */
+.logo {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 0px 10px #e74800);
+    transition: all 0.3s ease-in-out;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #a3a6c5;
+}
+
+/* Center Section */
+.navbar-center {
+    display: flex;
+    gap: 25px;
+    margin-left: 20px;
+}
+
+/* Navbar links */
+.nav-link {
+    text-decoration: none;
+    color: #a3a6c5;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Active state */
+.nav-link.active {
+    color: #cecfdf;
+}
+
+/* Hover & Active underline */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    background: #e74800;
+    filter: drop-shadow(0px 0px 5px #e74800);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 50%;
+}
+
+.nav-link:hover {
+    color: #cecfdf;
+}
+
+/* Right Section */
+.navbar-right {
+    font-size: 16px;
+    font-weight: 500;
+    color: #a3a6c5;
+}
+
+.contact {
+    font-size: 1.1rem;
+    color: #a3a6c5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds spacing between icon and text */
+  }
+  
+  .contact i {
+    background: -webkit-linear-gradient(#ee5914, #ff1e00); /* Orange color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 10px #e74800);
+    font-size: 1.5rem;
+    margin-top: 2px;
+    transition: color 0.3s ease;
+  }
+  
+  .contact:hover i {
+    color: #ff1e00; /* Darker orange on hover */
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

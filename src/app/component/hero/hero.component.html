@@ -1,0 +1,69 @@
+<div class="hero-section">
+  <h1 class="main-title">Nicolas Milan Ficnar</h1>
+  <p class="sub-title">Tvůrce webových stránek, discord botů a herních pluginů</p>
+  
+  <!-- New Content Divisions -->
+  <div class="content-container">
+    <div class="content-box">
+      <h2 class="st">01.</h2> <h2 class="st2">O Mně</h2>
+      <p class="description">
+        Student s více než 6-ti letou zkušeností. Začínal jsem na tvorbě pluginů do Minecraftu, teď se věnuji vývoji webových stránek.
+        <br><br>Pracuji pro menší projekty za cenu, která je mnohdy nižší než u většiny developerů.
+      </p>
+    </div>
+    
+    <div class="content-box">
+      <h2 class="st">02.</h2> <h2 class="st2">Co využívám</h2>
+      <ul class="technologies-list">
+        <li><span class="dot"></span> HTML5, CSS3</li>
+        <li><span class="dot"></span> TypeScript</li>
+        <li><span class="dot"></span> Java</li>
+        <li><span class="dot"></span> Photoshop</li>
+        <li><span class="dot"></span> Adobe Premiere</li>
+        <li><span class="dot"></span> Adobe After Effects</li>
+      </ul>
+    </div>
+  </div>
+  
+  <section id="projects">
+  <!-- New Projects Section -->
+  <div class="projects-section">
+    <h2 class="st">03.</h2> <h2 class="st2">Mé Projekty</h2>
+    <div class="projects-container">
+    
+    <!-- Loop through the projects array -->
+    <div *ngFor="let project of projects; let i = index" class="project-card">
+      <img [src]="project.image" alt="{{ project.title }}" class="project-image">
+      <span class="project-type">{{ project.type }}</span>
+      <h3 class="project-title">{{ project.title }}</h3>
+      <p class="project-desc">{{ project.description }}</p>
+      <!-- Custom Link Text with pointer icon aligned to the right -->
+      <div class="custom-link-text">
+        <i class="fa-solid fa-up-right-from-square linkcss"></i> <!-- External link icon -->
+        <a class="linkcss" [href]="project.actualLink" target="_blank">{{ project.customLinkText }}</a>
+        
+        <!-- Render tech icons from the project.tech array with manual space added -->
+        <div class="techs">
+          <span *ngFor="let icon of project.tech" [innerHTML]="icon" class="tech-icon"></span>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div> 
+
+  <!-- Extra Projects Section -->
+  <div class="projects-container" *ngIf="showExtraProjects" @fadeInSlideUp>
+    <div *ngFor="let project of extraProjects; let i = index" class="project-card">
+      <img [src]="project.image" alt="{{ project.title }}" class="project-image">
+      <span class="project-type">{{ project.type }}</span>
+      <h3 class="project-title">{{ project.title }}</h3>
+      <p class="project-desc">{{ project.description }}</p>
+      <div class="custom-link-text">
+        <i class="fa-solid fa-up-right-from-square linkcss"></i>
+        <a class="linkcss" [href]="project.actualLink" target="_blank">{{ project.customLinkText }}</a>
+      </div>
+    </div>
+  </div>
+  <br>  <br>  <br>  <br>
+  <section id="contact">

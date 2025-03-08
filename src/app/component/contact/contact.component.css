@@ -1,0 +1,273 @@
+/* Gradient Line Style */
+.gradient-line {
+    height: 2px;
+    background: linear-gradient(to right, #ee5914, #ff1e00);
+}
+
+/* Main Container for the Contact Sections */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Ensures both sections are spaced apart */
+    margin-top: 100px;
+    gap: 20px; /* Space between the two sections */
+    padding: 0 350px; /* Padding to the left and right to create space */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* Each Contact Section */
+.contact-section {
+    text-align: center; /* Center everything inside this section */
+    width: 100%; /* Takes full available width */
+    max-width: 500px; /* Limit the width of each contact form */
+}
+
+/* Title Style */
+.st {
+    font-size: 1.5rem;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#ee5914, #ff1e00); /* Orange color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 10px #e74800);
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.st2 {
+    background: white;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Jost', sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Contact Form Style */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* Email Container Flex */
+.email-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+    width: 100%;
+}
+
+/* Contact Text Style */
+.contact-text {
+    font-size: 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-left: auto;
+    padding-right: 50px;
+}
+
+.contact-text-right {
+    font-size: 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Form Input and Textarea Style */
+.contact-form label {
+    font-size: 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #171a22;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f8460f;
+    box-shadow: 0 0 8px #f8460f;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Submit Button Style */
+.submit-btn {
+    background: linear-gradient(90deg, #ee5914, #ff1e00);
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    filter: brightness(1.2);
+}
+
+/* Paper Plane Icon Position - Bottom Right of the form */
+/* Paper Plane Icon Style */
+.submit-icon {
+    font-size: 1.6rem;
+    padding: 5px 5px;
+    color: #f8460f;
+    position: absolute;
+    bottom: 15px;
+    right: -65px; /* Starting position */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-icon:hover {
+    transform: scale(1.2);
+    color: #ee5914;
+}
+
+/* Animation for the flying paper plane */
+.submit-icon.fly-away {
+    animation: flyAway 1s forwards;
+}
+
+/* Keyframes for moving the icon to the top-right corner */
+@keyframes flyAway {
+    0% {
+        bottom: 15px; /* Starting position (bottom) */
+        right: -65px; /* Starting position (right) */
+        opacity: 1;
+    }
+    100% {
+        bottom: 100px; /* Move upwards */
+        right: -100px; /* Move to the right */
+        opacity: 0;
+    }
+}
+
+
+/* Tick Icon Style */
+.tick-icon {
+    font-size: 2rem;
+    color: green;
+    position: absolute;
+    bottom: 15px;
+    right: -65px;
+    animation: fadeIn 1s forwards;
+}
+
+/* Fade-in animation for the tick icon */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Adjust the icon size and position as needed */
+.send-icon-container {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Social Buttons Style */
+.social-buttons {
+    margin-top: 20px;
+    text-align: center; /* Ensures buttons are centered */
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px; /* Adjusted padding for smaller buttons */
+    margin-bottom: 10px;
+    border: 2px solid  #171a22; /* Default gray border */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    color: #797d85;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    width: auto; /* Make buttons smaller */
+}
+
+.social-button i {
+    margin-right: 10px;
+}
+
+.social-button:hover {
+    background: linear-gradient(90deg, #ee5914, #ff1e00);
+    border-color: white;
+    color: white;
+}
+
+.social-button:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #ee5914, #ff1e00); /* Gradient border on hover */
+    z-index: -1;
+}
+
+/* Centering 'Nebo mě kontaktuj zde' Text */
+.contact-text-right {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 1.4rem; /* Adjusted size */
+}
+
+/* Center the social buttons under the text */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Ensure spacing between text and buttons */
+}
+
+/* Adjust the layout to have both text and buttons centered */
+.contact-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}

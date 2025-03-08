@@ -1,0 +1,63 @@
+<div class="gradient-line"></div>
+
+<div class="contact-container">
+    <!-- Left Contact Section -->
+    <div class="contact-section">
+        <div class="title-cs">
+            <h2 class="st">04. </h2>
+            <h2 class="st2">Kontaktuj mě</h2>
+        </div>
+        <form class="contact-form" (ngSubmit)="onSubmit()">
+            <div class="email-container">
+                <label for="email">Váš email</label>
+            </div>
+            <input type="email" id="email" name="email" placeholder="Zadejte svůj email" [(ngModel)]="email" required>
+
+            <label for="subject">Stručný nadpis důvodu kontaktování</label>
+            <input type="text" id="subject" name="subject" placeholder="Např. Chtěl bych vytvořit web" [(ngModel)]="subject" required>
+
+            <label for="message">O co máte zájem?</label>
+            <textarea id="message" name="message" placeholder="Napiště své představy.. pokud budu mít zájem o to s Vámi spolupracovat, kontaktuji Vás emailem" [(ngModel)]="message" required></textarea>
+
+            <!-- Submit Icon (Clicking it will submit the form) -->
+            <div class="send-icon-container" (click)="onSubmit()">
+                <i *ngIf="!submitted" 
+                   [ngClass]="{ 'submit-icon': true, 'fly-away': isFlying }" 
+                   class="fa-solid fa-paper-plane"></i>
+
+                <i *ngIf="submitted" 
+                   class="fa-solid fa-check tick-icon"></i>
+            </div>
+        </form>
+    </div>
+
+    <!-- Right Contact Section (Updated) -->
+    <div class="contact-section">
+        <form class="contact-form">
+            <div class="email-container">
+                <span class="contact-text-right">Najdeš mě i tady</span>
+            </div>
+        </form>
+
+        <!-- Social Media Buttons -->
+        <div class="social-buttons">
+            <a href="mailto:ficnarnicolas@gmail.com" class="social-button">
+                <i class="fa-solid fa-envelope"></i> ficnarnicolas&commat;gmail.com
+            </a>
+            <a href="https://instagram.com/ficnarek" target="_blank" class="social-button">
+                <i class="fa-brands fa-instagram"></i> &commat;ficnarek
+            </a>
+            <a href="https://discordapp.com/users/415136736717438976" target="_blank" class="social-button">
+                <i class="fa-brands fa-discord"></i> h1senk0
+            </a>
+            <a href="https://m.me/NicolasMilanFicnar" target="_blank" class="social-button">
+                <i class="fa-brands fa-facebook-messenger"></i> Nicolas Milan Ficnar
+            </a>
+            <a href="https://steamcommunity.com/id/hisenko" target="_blank" class="social-button">
+                <i class="fa-brands fa-steam"></i> Hisen
+            </a>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br><br>
