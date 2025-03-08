@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
   }
 
-  @media (max-width: 1350px) {
+  @media (max-width: 1620px) {
     /* Hide main content */
     .container, .card-container, app-navbar, app-footer {
       display: none;
