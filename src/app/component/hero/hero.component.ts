@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, Renderer2, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ContactComponent } from "../contact/contact.component";
@@ -137,15 +137,15 @@ export class HeroComponent {
       ],        
       status: 'Public',
       year: 2023,
-      customLinkText: ' youtube.com/hisen',  // Custom link text
-      actualLink: 'https://youtu.be/FxTT80Sc45M'  // The hidden actual link
+      customLinkText: ' youtube.com/hisen',
+      actualLink: 'https://youtu.be/FxTT80Sc45M'
     },
     {
       title: 'CityClub Hranice',
       type: 'Webová stránka',
       description: 'Stránka pro oblíbený klub v Hranicích na Moravě. Drink menu, nadcházející akce, time-line akcí a mnohem více.',
       image: 'https://i.imgur.com/cRDtfTg.png',
-      link: 'https://www.ficnar.xyz',
+      link: 'https://www.cityclubhranice.cz',
       tech: [
         '<i class="fa-brands fa-html5"></i>',
         '<i class="fa-brands fa-css3"></i>',
@@ -153,10 +153,25 @@ export class HeroComponent {
       ],       
       status: 'In Development',
       year: 2024,
-      customLinkText: ' Ve Vývoji',  // Custom link text
-      actualLink: 'https://www.ficnar.xyz'  // The hidden actual link
+      customLinkText: ' Ve Vývoji',
+      actualLink: 'https://www.cityclubhranice.cz'
     }
   ];
+
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    this.applyAnimations();
+  }
+
+  applyAnimations() {
+    // Convert NodeList to an array with specific type HTMLElement[]
+    const elements: HTMLElement[] = Array.from(this.el.nativeElement.querySelectorAll('.animate'));
+  
+    elements.forEach((element: HTMLElement) => {
+      this.renderer.addClass(element, 'animated');
+    });
+  }
 
   toggleProjects(): void {
     console.log('Toggling projects');
